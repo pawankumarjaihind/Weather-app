@@ -13,9 +13,15 @@ const weatherData = (address , callback) => {
         }
         else{
             callback(undefined, {
+                cityName : body.name,
                 temperature : body.main.temp,
+                feels_like : body.main.feels_like,
+                temp_min : body.main.temp_min,
+                temp_max : body.main.temp_max,
+                pressure : body.main.pressure,
+                humidity : body.main.humidity,
+                windspeed : body.wind.speed,
                 description : body.weather[0].description,
-                cityName : body.name
             })
         }
     })

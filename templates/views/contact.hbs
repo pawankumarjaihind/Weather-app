@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet"  href="./css/style.css">
+    <title> About </title>
+    <link rel="icon" href="/pictures/weather.png">
+</head>
+<body>
+  <div class="main-content">
+        {{>header}}
+        <div class="container">
+            <form action="https://formsubmit.co/2a714d17191fd31f2b6cbac287f04d18" method="POST" id="formid">
+                <h3>GET IN TOUCH</h3>
+                <input type="text" name="name" placeholder="Enter your Name" required>
+                <input type="email" name="email" placeholder="Enter your Email" required>
+                <input type="text" name="phone" placeholder="Enter your Number" required>
+
+                <textarea name="message" id="feedback" form="formid" placeholder="Give your suggestion or feedback" autocomplete="off"></textarea>
+                <input type="hidden" name="_next" value="https://pawan-weather-app.herokuapp.com/formsubmitted">
+                <input type="hidden" name="_template" value="table">
+
+                <input type="hidden" name="_autoresponse" value="Form Submitted Successfully">
+                <input id="sendFeedback" type="submit" value="Send">
+            </form>
+
+        </div>
+    </div>
+      {{>footer}}
+
+</body> 
+</html>

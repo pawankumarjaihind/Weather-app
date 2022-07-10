@@ -31,6 +31,22 @@ app.get('/about',(req,res)=>{
     })
 });
 
+app.get('/contact',(req,res)=>{
+    res.render('contact',{
+        title : 'CONTACT US',
+        name : 'PAWAN KUMAR'
+    })
+})
+
+
+app.get('/formsubmitted',(req,res)=>{
+    res.render('formsubmitted',{
+        title : 'Thanks!',
+        name : 'PAWAN KUMAR'
+    })
+})
+
+
 app.get('/weather', (req,res)=>{
     const address = req.query.address;
     if(!address){
@@ -39,17 +55,22 @@ app.get('/weather', (req,res)=>{
         })
     }
 
-    weatherData(address, (error, {temperature, description, cityName}={})=> {
+    weatherData(address, (error, {cityName ,temperature ,feels_like ,temp_min ,temp_max ,pressure ,humidity ,windspeed ,description}={})=> {
         if(error){
             return res.send({
                 error
             })
         }
-        console.log(temperature,description,cityName);
         res.send({
-            temperature,
-            description,
-            cityName
+            cityName ,
+            temperature ,
+            feels_like ,
+            temp_min ,
+            temp_max ,
+            pressure ,
+            humidity ,
+            windspeed ,
+            description
         })
     });
 });

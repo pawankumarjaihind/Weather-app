@@ -91,6 +91,53 @@ button{
     border-radius: 3px;
 }
 
-#message-2,#message-1{
+
+#fetchData {
+    color: #d8e2dc;
+    background-color: #264653;
+}
+
+#message-1,#message-2,#message-3,#message-4,#message-5,#message-6,#message-7,#message-8,#message-9{
     white-space: break-spaces;
+}
+
+ /* contact page styles */
+
+.container{
+    width: 500px;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-top: -30px;
+}
+
+form {
+    background-color: #ffd7ba;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding : 2vw 4vw;
+    margin: 2px;
+}
+
+form::h3 {
+    align-items: center;
+    
+}
+
+#feedback{
+    margin-top: 10px;
+    border: 1px solid #264653;
+    padding: 10px;
+    border-radius: 3px;
+    color: #264653;
+    background-color: #d8e2dc;
+
+}
+
+#sendFeedback {
+    color: #d8e2dc;
+    background-color: #264653;
 }
